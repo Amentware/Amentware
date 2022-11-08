@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Amentware</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Amentware</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Programs</a></li>
+								<li><a href="elements.html">C and C++</a></li>
+								<li><a href="#">Java</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							
+							<h2>Let's Start Learning</h2>
+							<p>Here,is a free place to learn for interview! <a href="#">Let's Start</a></p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/program.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Basic Programs</h2>
+										<p>A list of programs or programming examples on C, that can be used to get a basic idea regarding interview. It covers programs in string,matrix,array,numbers etc.</p>
+										<a href="#" class="special">Jumb to Programs</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/c.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">C and C++ Theory</h2>
+										<p>Most Common C and C++ Programming interview Questions and Answers, Covers Structure,Datatypes,
+										Union,Array,Loops etc.</p>
+										<a href="#" class="special">Go to C Theory</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/java.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Java Theory</h2>
+										<p>JAVA Interview Questions is prepared to help you understand the basic concepts of Java programming for interview purposes. All the important JAVA concepts are explained here with examples for your easy understanding.</p>
+										<a href="#" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+
+<!-- Questions-->
+							<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+
+									<section>
+										<h2 class="major">Coding question in C on Numbers</h2>
+										<p>This will cover programs based on Numbers.</p>
+<!--****************************************************************************-->
+<h3>Question 1:</h3>
+<blockquote>C program to reverse a number with explanation?</blockquote>
+<h3>Program</h3>
+<pre><code>
+int main()
+{    
+   int n=321,reverse=0;  
+   printf("before reverse = %d\n",n);
+   while(n!=0){        
+        reverse = reverse*10 + n%10;        
+        n=n/10;    
+   }
+   printf("after reverse = %d",reverse);    
+   return 0;
+} 
+</code></pre>
+<!--****************************************************************************-->
+<h3>Question 2:</h3>
+<blockquote>C Program to check the given number is an Armstrong or not?</blockquote>
+<h3>Program</h3>
+<pre><code>
+void main(){
+	int number,i=0,n,result=0,number1,temp;
+	printf("enter the number:");
+	scanf("%d",&number);
+	number1=number;
+	temp=number;
+	while(number!=0){
+		number=number/10;
+		i++;
+	}
+
+	while(number1!=0){
+		n=number1%10;
+		result=result+pow(n,i);
+		number1=number1/10;
+		}
+
+	if(temp==result)
+		printf("number is armstrong");
+		else
+		printf("not a armstrong");
+	getch();
+
+} 
+
+</code></pre>
+<!--****************************************************************************-->
+<h3>Question 3:</h3>
+<blockquote>Prime number program in C with explanation?</blockquote>
+<h3>Program</h3>
+<pre><code>
+void main(){
+int i=0,n,temp=0;
+	printf("Please give input a number: ");
+	scanf("%d",&n);
+	for(i=2;i<=(n/2);i++){
+		if(n%i==0)
+		{
+		temp=1;
+		break;
+		}
+	}
+	if(temp==1)
+		printf("given number is not a prime number");
+	else
+		printf("given number is a prime number");
+getch();
+	} 
+</code></pre>
+<!--****************************************************************************-->
+<h3>Question 4:</h3>
+<blockquote>Fibonacci series program in C using iteration.?</blockquote>
+<h3>Program</h3>
+<pre><code>
+int main()
+{
+  int n, first = 0, second = 1, result, i;
+  printf("Please give an input upto you want to print series : \n");
+  scanf("%d", &n);
+  printf("Fibonacci Series is:\n");
+  for (i = 0; i < n; i++)
+  {
+    if (i <= 1)
+      result = i;
+    else
+    {
+      result = first + second;
+      first = second;
+      second = result;
+    }
+    printf("%d\n", result);
+  } 
+  return 0;
+} 
+</code></pre>
+<!--****************************************************************************-->
+<h3>Question 5:</h3>
+<blockquote>Palindrome Program in C using the iterative method?</blockquote>
+<h3>Program</h3>
+<pre><code>
+void main(){
+	 int n, reverse = 0, temp;
+	 printf("enter the number : \n");
+	 scanf("%d",&n);
+	 temp = n;
+	 while(temp!=0){        
+		reverse = reverse*10 + temp%10;        
+		temp=temp/10;    
+	    }
+	 if(reverse == n){
+		printf("the given number is a palindrome");
+	 }
+	 else{
+		printf("the given number is not a palindrom");
+	 }
+	 getch();
+ } 
+</code></pre>
+<!--****************************************************************************-->
+<h3>Question 6:</h3>
+<blockquote>C Program to find Greatest number among three?</blockquote>
+<h3>Program</h3>
+<pre><code>
+void main(){
+	int a,b,c;
+	printf("enter the value of a: ");
+	scanf("%d",&a);
+	printf("enter the value of b: ");
+	scanf("%d",&b);
+	printf("enter the value of c: ");
+	scanf("%d",&c);
+	if(a>=b && a>=c)
+		printf(" a is greatest");
+	if(b>=a && b>=c)
+		printf(" b is greatest");
+	if(c>=a && c>=b)
+		printf("c is greatest");
+	getch();
+} 
+</code></pre>
+<!--****************************************************************************-->
+<h3>Question 7:</h3>
+<blockquote>C Program to Find Prime factors of a given number?</blockquote>
+<h3>Program</h3>
+<pre><code>
+void main(){
+int i=0,j,n,temp=0;
+	printf("please enter a number: ");
+	scanf("%d",&n);
+	printf("prime factors of a given number \n");
+	 while(n % 2 == 0) {
+      printf("%d, ", 2);
+      n = n/2;
+   }
+   for(i = 3; i <= sqrt(n); i=i+2){
+      while(n % i == 0) {
+         printf("%d, ", i);
+         n = n/i;
+      }
+   }
+   if(n > 2) {
+      printf("%d, ", n);
+   }
+getch();
+	} 
+</code></pre>
+<!--****************************************************************************-->
+
+
+									</section>
+
+
+								</div>
+							</div>
+
+						
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Hi, i'm Ananthu Suresh
+							<br>Pursuing MCA at SNGCE,Kolenchery
+							<br>
+							Hope this small website Helps you with your preparation for interviews, Feel free to contact me any time. All the best for your interviews.<br><a href="">☕Buy me a Coffee.</a></p>
+							
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Ananthu Suresh<br />
+									Piravom,Ernakulam<br />
+									682313
+									
+								</li>
+								<li class="icon solid fa-phone">+92 9207624728</li>
+								<li class="icon solid fa-envelope"><a href="#">ananthusureshkk151@gmail.com</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/ananthu151</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/ananthu151</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/ananthuu_suresh</a></li>
+							</ul>
+							
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
